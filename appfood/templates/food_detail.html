@@ -1,0 +1,25 @@
+{% extends 'main-layout.html' %}
+
+{% block content %}
+    <div class="food-detail-container">
+        <div class="food-detail-center">
+            <h1>{{ food.name }}</h1>
+            <img src="{{ food.image.url }}" style="height: 300px;">
+
+            <p class="food-detail-desc">
+                {{ food.desc }}
+            </p>
+            <p>
+                <span class="food-sale-price">
+                    {{ food.sale_price|floatformat }} сом
+                </span>
+            </p>
+            <div>
+                <a href="#" class="btn btn-light">
+                    <img src="/static/images/basket_food.jpg" width="64">
+                    В корзину
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
